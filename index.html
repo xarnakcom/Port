@@ -52,6 +52,33 @@
 
   main{ padding: 5vh 6vw 10vh; }
 
+  #filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 3vh;
+  }
+  .filter-btn{
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--ink-dim);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .filter-btn:hover{
+    color: var(--ink);
+    border-color: var(--moss);
+  }
+  .filter-btn.active{
+    color: var(--bg);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
   #status{
     color: var(--ink-dim);
     font-size: 0.9rem;
@@ -96,6 +123,20 @@
     padding: 4px 8px;
     border-radius: 2px;
     backdrop-filter: blur(2px);
+  }
+  .card .project-tag{
+    top: auto;
+    bottom: 40px;
+    left: 10px;
+    right: 10px;
+    background: rgba(184,134,59,0.85);
+    color: #0c0d0b;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .card .name{
     position: absolute;
@@ -185,6 +226,7 @@
 
 <main>
   <div id="status">Загрузка списка файлов…</div>
+  <div id="filters"></div>
   <div class="grid" id="grid"></div>
 </main>
 
@@ -207,6 +249,9 @@ const MEDIA_JSON_PATH = "./media.json";
 
 const statusEl = document.getElementById('status');
 const gridEl = document.getElementById('grid');
+const filtersEl = document.getElementById('filters');
+let currentMediaItems = [];
+let activeFilter = 'all';
 const lightbox = document.getElementById('lightbox');
 const lightboxContent = document.getElementById('lightboxContent');
 document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
@@ -235,6 +280,13 @@ function buildCard(item){
   tag.className = 'tag';
   tag.textContent = isVideo(item.mime_type) ? 'видео' : 'фото';
   card.appendChild(tag);
+
+  if (item.project) {
+    const projectTag = document.createElement('div');
+    projectTag.className = 'tag project-tag';
+    projectTag.textContent = item.project;
+    card.appendChild(projectTag);
+  }
 
   if (isImage(item.mime_type)) {
     const img = document.createElement('img');
@@ -297,6 +349,57 @@ function openLightbox(item){
   lightbox.classList.add('open');
 }
 
+function renderFilters(mediaItems){
+  const projects = [...new Set(mediaItems.map(i => i.project).filter(Boolean))].sort();
+  if (projects.length === 0) { filtersEl.style.display = 'none'; return; }
+
+  filtersEl.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn active';
+  allBtn.textContent = 'Все работы';
+  allBtn.addEventListener('click', () => setFilter('all'));
+  filtersEl.appendChild(allBtn);
+
+  const commonBtn = document.createElement('button');
+  commonBtn.className = 'filter-btn';
+  commonBtn.textContent = 'Без проекта';
+  commonBtn.addEventListener('click', () => setFilter('__none__'));
+  filtersEl.appendChild(commonBtn);
+
+  projects.forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.textContent = p;
+    btn.addEventListener('click', () => setFilter(p));
+    filtersEl.appendChild(btn);
+  });
+}
+
+function setFilter(filter){
+  activeFilter = filter;
+  [...filtersEl.children].forEach(btn => {
+    const label = btn.textContent;
+    const matches = (filter === 'all' && label === 'Все работы') ||
+                     (filter === '__none__' && label === 'Без проекта') ||
+                     (label === filter);
+    btn.classList.toggle('active', matches);
+  });
+  renderGrid();
+}
+
+function renderGrid(){
+  gridEl.innerHTML = '';
+  const filtered = currentMediaItems.filter(item => {
+    if (activeFilter === 'all') return true;
+    if (activeFilter === '__none__') return !item.project;
+    return item.project === activeFilter;
+  });
+  filtered.forEach(item => {
+    const card = buildCard(item);
+    if (card) gridEl.appendChild(card);
+  });
+}
+
 async function init(){
   try {
     const res = await fetch(MEDIA_JSON_PATH, { cache: 'no-store' });
@@ -310,10 +413,9 @@ async function init(){
       return;
     }
 
-    mediaItems.forEach(item => {
-      const card = buildCard(item);
-      if (card) gridEl.appendChild(card);
-    });
+    currentMediaItems = mediaItems;
+    renderFilters(mediaItems);
+    renderGrid();
 
     statusEl.textContent = '';
   } catch (err) {
