@@ -1,5 +1,21 @@
 [
   {
+    "name": "general.png",
+    "mime_type": "image/png",
+    "kind": "image",
+    "path": "media/Инженерное/general.png",
+    "project": "Инженерное",
+    "created": "2026-08-29T05:29:35+00:00"
+  },
+  {
+    "name": "general.png",
+    "mime_type": "image/png",
+    "kind": "image",
+    "path": "media/Униформа для студсовета (завершено)/general.png",
+    "project": "Униформа для студсовета (завершено)",
+    "created": "2026-08-29T05:29:17+00:00"
+  },
+  {
     "name": "photo_2026-06-16 23.30.35.jpeg",
     "mime_type": "image/jpeg",
     "kind": "image",
