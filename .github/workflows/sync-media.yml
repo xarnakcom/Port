@@ -27,6 +27,6 @@ jobs:
         run: |
           git config user.name "media-sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add media.json media/
+          git add media.json projects.json media/
           git diff --cached --quiet || git commit -m "Синхронизация медиафайлов с Яндекс.Диска"
           git push
