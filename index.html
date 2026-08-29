@@ -3,40 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфолио</title>
+<title>Портфолио — Xarnak</title>
+
+<!-- ШРИФТЫ (те же, что на xarnak.com и go.xarnak.com) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/xarnakcom/nauryz-red-keds/fonts.css" rel="stylesheet">
+
 <style>
   :root{
-    --bg: #0c0d0b;
-    --bg-raised: #15160f;
-    --ink: #ece7db;
-    --ink-dim: #9b9686;
-    --line: #2a2b23;
-    --accent: #b8863b;
-    --moss: #6b7156;
+    /* ЦВЕТА — единые с go.xarnak.com */
+    --bg: #1B1B1B;
+    --bg-raised: #242424;
+    --ink: #ececec;
+    --ink-dim: #a9abb3;
+    --line: #333333;
+    --accent: #F2CC00;
+    --text-dark: #1B1B1B;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html,body{background:var(--bg); color:var(--ink); font-family:'Inter', -apple-system, system-ui, sans-serif;}
 
-  @font-face {
-    font-family:'Fraunces-fallback';
-    src:local('Georgia');
-  }
-
   header{
     padding: 8vh 6vw 4vh;
     border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  header img.logo{
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
   }
   .eyebrow{
     font-size: 0.75rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--moss);
+    color: var(--accent);
     margin-bottom: 1.2rem;
     font-weight: 600;
   }
   h1{
-    font-family: 'Fraunces-fallback', Georgia, serif;
-    font-weight: 500;
+    font-family: 'NauryzRedKeds', 'Playfair Display', Georgia, serif;
+    font-weight: 800;
     font-size: clamp(2rem, 5vw, 3.6rem);
     line-height: 1.05;
     letter-spacing: -0.01em;
@@ -63,20 +75,22 @@
     border: 1px solid var(--line);
     color: var(--ink-dim);
     font-family: inherit;
+    font-weight: 500;
     font-size: 0.8rem;
-    padding: 7px 14px;
+    padding: 7px 16px;
     border-radius: 20px;
     cursor: pointer;
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
   }
   .filter-btn:hover{
     color: var(--ink);
-    border-color: var(--moss);
+    border-color: var(--accent);
   }
   .filter-btn.active{
-    color: var(--bg);
+    color: var(--text-dark);
     background: var(--accent);
     border-color: var(--accent);
+    font-weight: 600;
   }
 
   #status{
@@ -96,7 +110,7 @@
     position: relative;
     background: var(--bg-raised);
     border: 1px solid var(--line);
-    border-radius: 3px;
+    border-radius: 18px;
     overflow: hidden;
     cursor: pointer;
     aspect-ratio: 4/5;
@@ -118,10 +132,11 @@
     font-size: 0.65rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    background: rgba(12,13,11,0.72);
-    color: var(--ink);
-    padding: 4px 8px;
-    border-radius: 2px;
+    font-weight: 600;
+    background: rgba(27,27,27,0.78);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
     backdrop-filter: blur(2px);
   }
   .card .project-tag{
@@ -129,14 +144,15 @@
     bottom: 40px;
     left: 10px;
     right: 10px;
-    background: rgba(184,134,59,0.85);
-    color: #0c0d0b;
-    font-weight: 600;
+    background: var(--accent);
+    color: var(--text-dark);
+    font-weight: 700;
     text-transform: none;
     letter-spacing: 0.02em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-radius: 10px;
   }
   .card .name{
     position: absolute;
@@ -174,9 +190,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: linear-gradient(160deg, #17180f, #0f100b);
+    background: linear-gradient(160deg, #262626, #1c1c1c);
   }
-  .doc-tile svg{ width: 44px; height: 44px; opacity: 0.85; }
+  .doc-tile svg{ width: 44px; height: 44px; opacity: 0.9; }
   .doc-ext{
     font-size: 0.7rem;
     letter-spacing: 0.12em;
@@ -187,7 +203,7 @@
   /* Lightbox */
   #lightbox{
     position: fixed; inset: 0;
-    background: rgba(6,6,5,0.94);
+    background: rgba(10,10,10,0.94);
     display: none;
     align-items: center;
     justify-content: center;
@@ -198,7 +214,7 @@
   #lightbox img, #lightbox video{
     max-width: 100%;
     max-height: 86vh;
-    border-radius: 2px;
+    border-radius: 12px;
   }
   #lightbox .close{
     position: absolute;
@@ -265,9 +281,12 @@
 <body>
 
 <header>
-  <div class="eyebrow">Портфолио &mdash; работы</div>
-  <h1>Фото, видео и документы с рабочего диска.</h1>
-  <p class="sub">Галерея подключена напрямую к папке на Яндекс.Диске — новые файлы, добавленные в папку, появляются здесь при обновлении страницы.</p>
+  <img class="logo" src="https://cdn.jsdelivr.net/gh/xarnakcom/go.xarnak.com/logos/xarnak.com.svg" alt="Xarnak">
+  <div>
+    <div class="eyebrow">Портфолио &mdash; работы</div>
+    <h1>Фото, видео и документы с рабочего диска.</h1>
+    <p class="sub">Галерея подключена напрямую к папке на Яндекс.Диске — новые файлы, добавленные в папку, появляются здесь при обновлении страницы.</p>
+  </div>
 </header>
 
 <main>
@@ -317,17 +336,17 @@ const TAG_LABELS = { image: 'фото', video: 'видео', pdf: 'pdf', text: '
 
 function playIcon(){
   return '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-    '<circle cx="12" cy="12" r="11" fill="rgba(12,13,11,0.55)" stroke="#ece7db" stroke-width="1.2"/>' +
-    '<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#ece7db"/></svg>';
+    '<circle cx="12" cy="12" r="11" fill="rgba(27,27,27,0.6)" stroke="#ececec" stroke-width="1.2"/>' +
+    '<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#ececec"/></svg>';
 }
 
 function docIcon(){
   return '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-    '<path d="M6 2H14L19 7V22H6V2Z" stroke="#ece7db" stroke-width="1.3" fill="none"/>' +
-    '<path d="M14 2V7H19" stroke="#ece7db" stroke-width="1.3" fill="none"/>' +
-    '<line x1="8.5" y1="12" x2="16" y2="12" stroke="#ece7db" stroke-width="1" opacity="0.7"/>' +
-    '<line x1="8.5" y1="15" x2="16" y2="15" stroke="#ece7db" stroke-width="1" opacity="0.7"/>' +
-    '<line x1="8.5" y1="18" x2="13" y2="18" stroke="#ece7db" stroke-width="1" opacity="0.7"/>' +
+    '<path d="M6 2H14L19 7V22H6V2Z" stroke="#ececec" stroke-width="1.3" fill="none"/>' +
+    '<path d="M14 2V7H19" stroke="#ececec" stroke-width="1.3" fill="none"/>' +
+    '<line x1="8.5" y1="12" x2="16" y2="12" stroke="#ececec" stroke-width="1" opacity="0.7"/>' +
+    '<line x1="8.5" y1="15" x2="16" y2="15" stroke="#ececec" stroke-width="1" opacity="0.7"/>' +
+    '<line x1="8.5" y1="18" x2="13" y2="18" stroke="#ececec" stroke-width="1" opacity="0.7"/>' +
     '</svg>';
 }
 
