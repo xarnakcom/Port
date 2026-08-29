@@ -1,8 +1,9 @@
 // Запускается на стороне GitHub Actions (Node.js).
 // Рекурсивно обходит папку портфолио на Яндекс.Диске (включая вложенные
-// папки проектов) и скачивает найденные фото/видео в media/ в репозитории,
-// сохраняя структуру папок. Так сайт отдаёт настоящие файлы со своего
-// домена — без временных, протухающих ссылок Яндекса.
+// папки проектов) и скачивает найденные фото, видео, PDF, TXT и RTF в
+// media/ в репозитории, сохраняя структуру папок. Так сайт отдаёт
+// настоящие файлы со своего домена — без временных, протухающих ссылок
+// Яндекса.
 
 const YANDEX_PUBLIC_FOLDER_URL = process.env.YANDEX_PUBLIC_FOLDER_URL;
 const PAGE_SIZE = 100;
@@ -19,6 +20,27 @@ const path = await import("node:path");
 
 function isImage(mime) { return mime && mime.startsWith("image/"); }
 function isVideo(mime) { return mime && mime.startsWith("video/"); }
+function isDocument(mime) { return mime === "application/pdf" || mime === "text/plain"; }
+function isPdf(mime, ext) { return mime === "application/pdf" || ext === "pdf"; }
+function isText(mime, ext) { return mime === "text/plain" || ext === "txt"; }
+function isRtf(mime, ext) { return mime === "application/rtf" || mime === "text/rtf" || ext === "rtf"; }
+
+function fileExt(name) {
+  const parts = name.split(".");
+  return parts.length > 1 ? parts.pop().toLowerCase() : "";
+}
+
+// Определяет тип файла для сайта: image / video / pdf / text / rtf / null (не поддерживается)
+function classify(item) {
+  const ext = fileExt(item.name);
+  const mime = item.mime_type || "";
+  if (isImage(mime)) return "image";
+  if (isVideo(mime)) return "video";
+  if (isPdf(mime, ext)) return "pdf";
+  if (isText(mime, ext)) return "text";
+  if (isRtf(mime, ext)) return "rtf";
+  return null;
+}
 
 function sanitizeSegment(name) {
   return name.replace(/[/\\?%*:|"<>]/g, "_");
@@ -56,8 +78,9 @@ async function walkFolder(publicKey, subPath, projectPath, out) {
     if (item.type === "dir") {
       const nestedSubPath = subPath ? `${subPath}/${item.name}` : `/${item.name}`;
       await walkFolder(publicKey, nestedSubPath, [...projectPath, item.name], out);
-    } else if (item.type === "file" && (isImage(item.mime_type) || isVideo(item.mime_type))) {
-      out.push({ item, projectPath });
+    } else if (item.type === "file") {
+      const kind = classify(item);
+      if (kind) out.push({ item, projectPath, kind });
     }
   }
 }
@@ -117,7 +140,7 @@ const existingLocalFiles = new Set(await listLocalFiles(""));
 const expectedLocalFiles = new Set();
 const media = [];
 
-for (const { item, projectPath } of collected) {
+for (const { item, projectPath, kind } of collected) {
   const safeSegments = projectPath.map(sanitizeSegment);
   const safeName = sanitizeSegment(item.name);
   const relPath = [...safeSegments, safeName].join("/");
@@ -139,6 +162,7 @@ for (const { item, projectPath } of collected) {
   media.push({
     name: item.name,
     mime_type: item.mime_type,
+    kind: kind,
     path: `${MEDIA_DIR}/${relPath}`,
     // null = файл лежит прямо в корневой папке портфолио, не привязан к проекту
     project: projectPath.length > 0 ? projectPath[projectPath.length - 1] : null,
