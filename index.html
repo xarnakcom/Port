@@ -3,265 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфолио — Xarnak</title>
+<title>Xarnak — Портфолио</title>
 
 <!-- ШРИФТЫ (те же, что на xarnak.com и go.xarnak.com) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/xarnakcom/nauryz-red-keds/fonts.css" rel="stylesheet">
 
 <style>
   :root{
-    /* ЦВЕТА — единые с go.xarnak.com */
-    --bg: #1B1B1B;
-    --bg-raised: #242424;
-    --ink: #ececec;
-    --ink-dim: #a9abb3;
-    --line: #333333;
+    --bg: #FFFDF8;
+    --bg-raised: #F3EFE4;
+    --ink: #17181A;
+    --ink-dim: #6b6b6b;
+    --line: #e7e2d4;
     --accent: #F2CC00;
-    --text-dark: #1B1B1B;
+    --text-dark: #17181A;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html,body{background:var(--bg); color:var(--ink); font-family:'Inter', -apple-system, system-ui, sans-serif;}
+  a{ color: inherit; }
+  img{ display:block; max-width:100%; }
 
-  header{
-    padding: 8vh 6vw 4vh;
-    border-bottom: 1px solid var(--line);
+  .display{
+    font-family: 'NauryzRedKeds', Georgia, serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+
+  /* NAVBAR */
+  header{ border-bottom: 1px solid var(--line); }
+  .navbar{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
+    padding: 18px 6vw;
+    max-width: 1400px;
+    margin: 0 auto;
   }
-  header img.logo{
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-  }
-  .eyebrow{
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.2rem;
-    font-weight: 600;
-  }
-  h1{
-    font-family: 'NauryzRedKeds', 'Playfair Display', Georgia, serif;
-    font-weight: 800;
-    font-size: clamp(2rem, 5vw, 3.6rem);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    max-width: 16ch;
-  }
-  .sub{
-    margin-top: 1.4rem;
-    color: var(--ink-dim);
-    font-size: 1rem;
-    max-width: 46ch;
-    line-height: 1.5;
-  }
-
-  main{ padding: 5vh 6vw 10vh; }
-
-  #filters{
-    display: flex;
-    flex-wrap: wrap;
+  .navbar .brand img{ width: 34px; height: 34px; }
+  .navbar nav{ display: flex; gap: 28px; }
+  .navbar nav a{ text-decoration:none; font-size: 0.9rem; font-weight: 500; }
+  .navbar nav a:hover{ opacity: 0.65; }
+  .btn-pill{
+    display: inline-flex;
+    align-items: center;
     gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 12px 22px;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .btn-pill:hover{ transform: translateY(-1px); opacity: 0.92; }
+  .btn-dark{ background: var(--ink); color: #fff; }
+  .btn-outline{ background: transparent; color: var(--ink); border: 1px solid var(--line); }
+
+  /* HERO */
+  .hero{ padding: 6vh 6vw 4vh; max-width: 1200px; margin: 0 auto; }
+  .hero-greet{
+    text-align: center;
+    font-size: clamp(1.8rem, 4.2vw, 3rem);
+    line-height: 1.15;
     margin-bottom: 3vh;
   }
-  .filter-btn{
-    background: transparent;
-    border: 1px solid var(--line);
+  .hero-greet .script{
+    font-style: italic;
+    font-weight: 400;
     color: var(--ink-dim);
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 0.8rem;
-    padding: 7px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-  }
-  .filter-btn:hover{
-    color: var(--ink);
-    border-color: var(--accent);
-  }
-  .filter-btn.active{
-    color: var(--text-dark);
-    background: var(--accent);
-    border-color: var(--accent);
-    font-weight: 600;
   }
 
-  #status{
-    color: var(--ink-dim);
-    font-size: 0.9rem;
-    padding: 3vh 0;
-  }
-  #status.error{ color: #c96b4e; }
-
-  .grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 14px;
-  }
-
-  .card{
+  .hero-photo-frame{
     position: relative;
-    background: var(--bg-raised);
-    border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: 28px;
     overflow: hidden;
-    cursor: pointer;
-    aspect-ratio: 4/5;
+    background:
+      radial-gradient(circle at 50% 20%, rgba(242,204,0,0.45), rgba(255,253,248,0) 65%),
+      var(--bg-raised);
+    aspect-ratio: 16/10;
+    max-height: 70vh;
   }
-  .card img, .card video{
+  .hero-photo-frame img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  .card:hover img, .card:hover video{
-    transform: scale(1.04);
-  }
-  .card .tag{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    background: rgba(27,27,27,0.78);
-    color: var(--accent);
-    padding: 4px 10px;
-    border-radius: 20px;
-    backdrop-filter: blur(2px);
-  }
-  .card .project-tag{
-    top: auto;
-    bottom: 40px;
-    left: 10px;
-    right: 10px;
-    background: var(--accent);
-    color: var(--text-dark);
-    font-weight: 700;
-    text-transform: none;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border-radius: 10px;
-  }
-  .card .name{
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 10px 12px;
-    font-size: 0.78rem;
-    color: var(--ink);
-    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .card:hover .name{ opacity: 1; }
-  .card .playbadge{
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-  }
-  .card .playbadge svg{
-    width: 46px; height: 46px;
-    opacity: 0.85;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+    object-position: center top;
   }
 
-  .doc-tile{
-    width: 100%;
-    height: 100%;
+  .hero-meta-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .hero-chip{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .hero-chip .dot{
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(242,204,0,0.25);
+  }
+  .hero-specialty{
+    max-width: 34ch;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--ink-dim);
+    text-align: right;
+  }
+
+  .hero-name-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 6vh;
+  }
+  .hero-name{
+    font-size: clamp(2.6rem, 8vw, 5.2rem);
+    line-height: 0.98;
+  }
+  .hero-role{
+    font-size: clamp(1.4rem, 3.2vw, 2rem);
+    line-height: 1.05;
+    text-align: right;
+  }
+
+  /* PROJECTS */
+  .projects-section{ padding: 8vh 6vw 10vh; max-width: 1300px; margin: 0 auto; }
+  .section-title{
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    margin-bottom: 4vh;
+  }
+  #projectsStatus{ color: var(--ink-dim); font-size: 0.9rem; }
+  #projectsStatus.error{ color: #b3462c; }
+
+  .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .project-card{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(160deg, #262626, #1c1c1c);
+    gap: 14px;
   }
-  .doc-tile svg{ width: 44px; height: 44px; opacity: 0.9; }
-  .doc-ext{
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-dim);
-  }
-
-  /* Lightbox */
-  #lightbox{
-    position: fixed; inset: 0;
-    background: rgba(10,10,10,0.94);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    padding: 4vh 4vw;
-  }
-  #lightbox.open{ display: flex; }
-  #lightbox img, #lightbox video{
-    max-width: 100%;
-    max-height: 86vh;
-    border-radius: 12px;
-  }
-  #lightbox .close{
-    position: absolute;
-    top: 24px; right: 32px;
-    color: var(--ink);
-    font-size: 1.8rem;
-    cursor: pointer;
-    line-height: 1;
-    opacity: 0.7;
-  }
-  #lightbox .close:hover{ opacity: 1; }
-  #lightbox .fallback{
-    color: var(--ink-dim);
-    text-align: center;
-    font-size: 0.95rem;
-  }
-  #lightbox .fallback a{
-    color: var(--accent);
-    text-decoration: underline;
-  }
-
-  .pdf-frame{
-    width: min(900px, 90vw);
-    height: 86vh;
-    border: 1px solid var(--line);
-    background: #fff;
-  }
-  #lightbox .open-link{
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: var(--accent);
-    font-size: 0.85rem;
-  }
-  .text-preview{
-    max-width: min(760px, 90vw);
-    max-height: 86vh;
-    overflow: auto;
+  .project-cover{
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
     background: var(--bg-raised);
+  }
+  .project-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .project-card:hover .project-cover img{ transform: scale(1.04); }
+  .project-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .project-title{
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .project-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
     border: 1px solid var(--line);
-    padding: 24px;
-    font-family: 'SF Mono', 'Consolas', monospace;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: var(--ink);
-    white-space: pre-wrap;
-    word-break: break-word;
+    border-radius: 999px;
+    padding: 8px 16px;
+    flex-shrink: 0;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .project-link:hover{ background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .all-works-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
   }
 
   footer{
@@ -269,278 +215,122 @@
     color: var(--ink-dim);
     font-size: 0.8rem;
     border-top: 1px solid var(--line);
+    text-align: center;
   }
 
   :focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  @media (prefers-reduced-motion: reduce){
-    .card img, .card video, .card .name{ transition: none; }
+  @media (max-width: 640px){
+    .hero-meta-row, .hero-name-row{ flex-direction: column; align-items: flex-start; }
+    .hero-specialty, .hero-role{ text-align: left; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img class="logo" src="https://cdn.jsdelivr.net/gh/xarnakcom/go.xarnak.com/logos/xarnak.com.svg" alt="Xarnak">
-  <div>
-    <div class="eyebrow">Портфолио &mdash; работы</div>
-    <h1>Фото, видео и документы с рабочего диска.</h1>
-    <p class="sub">Галерея подключена напрямую к папке на Яндекс.Диске — новые файлы, добавленные в папку, появляются здесь при обновлении страницы.</p>
+  <div class="navbar">
+    <a href="index.html" class="brand">
+      <img src="https://cdn.jsdelivr.net/gh/xarnakcom/go.xarnak.com/logos/xarnak.com.svg" alt="Xarnak">
+    </a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="#projects">Работы</a>
+      <a href="works.html">Все работы</a>
+    </nav>
+    <a href="https://t.me/xarnakcom" class="btn-pill btn-dark" target="_blank" rel="noopener">Написать ↗</a>
   </div>
 </header>
 
-<main>
-  <div id="status">Загрузка списка файлов…</div>
-  <div id="filters"></div>
-  <div class="grid" id="grid"></div>
-</main>
+<section class="hero">
+  <div class="hero-greet">Привет, <span class="script">рад видеть</span></div>
 
-<footer>Обновляется автоматически из облачной папки.</footer>
+  <div class="hero-photo-frame">
+    <img src="img/photo/general.png" alt="Фото">
+  </div>
 
-<div id="lightbox">
-  <span class="close" id="lightboxClose">&times;</span>
-  <div id="lightboxContent"></div>
-</div>
+  <div class="hero-meta-row">
+    <div class="hero-chip"><span class="dot"></span> Открыт для новых проектов</div>
+    <div class="hero-specialty">Веб-разработка, умный дом, AI-видео и фото, туры на природе.</div>
+  </div>
+
+  <div class="hero-name-row">
+    <div class="hero-name display">Я — САМАТ<br>ИСЕНОВ</div>
+    <div class="hero-role display">ИНЖЕНЕР-<br>ДИЗАЙНЕР</div>
+  </div>
+</section>
+
+<section class="projects-section" id="projects">
+  <h2 class="section-title display">Последние работы</h2>
+  <div id="projectsStatus">Загрузка проектов…</div>
+  <div class="projects-grid" id="projectsGrid"></div>
+  <div class="all-works-wrap">
+    <a href="works.html" class="btn-pill btn-outline">Показать все работы →</a>
+  </div>
+</section>
+
+<footer>Обновляется автоматически из облачной папки на Яндекс.Диске.</footer>
 
 <script>
-/* =========================================================
-   Список файлов сайт читает из media.json — этот файл
-   обновляет GitHub Action (.github/workflows/sync-media.yml),
-   который сам ходит в Яндекс.Диск на стороне сервера.
-   Прямой запрос к API Яндекса из браузера не работает
-   из-за отсутствия CORS-заголовков на их стороне.
-   ========================================================= */
-const MEDIA_JSON_PATH = "./media.json";
+const PROJECTS_JSON_PATH = "./projects.json";
+const statusEl = document.getElementById('projectsStatus');
+const gridEl = document.getElementById('projectsGrid');
 
-const statusEl = document.getElementById('status');
-const gridEl = document.getElementById('grid');
-const filtersEl = document.getElementById('filters');
-let currentMediaItems = [];
-let activeFilter = 'all';
-const lightbox = document.getElementById('lightbox');
-const lightboxContent = document.getElementById('lightboxContent');
-document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-function closeLightbox(){
-  lightbox.classList.remove('open');
-  lightboxContent.innerHTML = '';
-}
-
-function isImage(kind){ return kind === 'image'; }
-function isVideo(kind){ return kind === 'video'; }
-function isDoc(kind){ return kind === 'pdf' || kind === 'text' || kind === 'rtf'; }
-
-const TAG_LABELS = { image: 'фото', video: 'видео', pdf: 'pdf', text: 'txt', rtf: 'rtf' };
-
-function playIcon(){
-  return '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-    '<circle cx="12" cy="12" r="11" fill="rgba(27,27,27,0.6)" stroke="#ececec" stroke-width="1.2"/>' +
-    '<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#ececec"/></svg>';
-}
-
-function docIcon(){
-  return '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-    '<path d="M6 2H14L19 7V22H6V2Z" stroke="#ececec" stroke-width="1.3" fill="none"/>' +
-    '<path d="M14 2V7H19" stroke="#ececec" stroke-width="1.3" fill="none"/>' +
-    '<line x1="8.5" y1="12" x2="16" y2="12" stroke="#ececec" stroke-width="1" opacity="0.7"/>' +
-    '<line x1="8.5" y1="15" x2="16" y2="15" stroke="#ececec" stroke-width="1" opacity="0.7"/>' +
-    '<line x1="8.5" y1="18" x2="13" y2="18" stroke="#ececec" stroke-width="1" opacity="0.7"/>' +
-    '</svg>';
-}
-
-function buildCard(item){
-  const card = document.createElement('div');
-  card.className = 'card';
-
-  const tag = document.createElement('div');
-  tag.className = 'tag';
-  tag.textContent = TAG_LABELS[item.kind] || item.kind;
-  card.appendChild(tag);
-
-  if (item.project) {
-    const projectTag = document.createElement('div');
-    projectTag.className = 'tag project-tag';
-    projectTag.textContent = item.project;
-    card.appendChild(projectTag);
-  }
-
-  if (isImage(item.kind)) {
-    const img = document.createElement('img');
-    img.loading = 'lazy';
-    img.alt = item.name;
-    img.src = encodeMediaPath(item.path);
-    card.appendChild(img);
-  } else if (isVideo(item.kind)) {
-    const video = document.createElement('video');
-    video.src = encodeMediaPath(item.path);
-    video.muted = true;
-    video.preload = 'metadata';
-    video.playsInline = true;
-    card.appendChild(video);
-
-    const badge = document.createElement('div');
-    badge.className = 'playbadge';
-    badge.innerHTML = playIcon();
-    card.appendChild(badge);
-  } else if (isDoc(item.kind)) {
-    const tile = document.createElement('div');
-    tile.className = 'doc-tile';
-    tile.innerHTML = docIcon() + '<span class="doc-ext">.' + (item.kind === 'text' ? 'txt' : item.kind) + '</span>';
-    card.appendChild(tile);
-  } else {
-    return null; // неизвестный тип файла
-  }
-
-  const name = document.createElement('div');
-  name.className = 'name';
-  name.textContent = item.name;
-  card.appendChild(name);
-
-  card.addEventListener('click', () => openLightbox(item));
-  return card;
-}
-
-// Кодирует каждый сегмент пути отдельно, сохраняя "/" как разделитель —
-// нужно, чтобы имена файлов с пробелами/кириллицей корректно открывались.
 function encodeMediaPath(p){
   return p.split('/').map(encodeURIComponent).join('/');
 }
 
-async function openLightbox(item){
-  lightboxContent.innerHTML = '';
-  const src = encodeMediaPath(item.path);
+function buildProjectCard(project){
+  const card = document.createElement('div');
+  card.className = 'project-card';
 
-  if (isImage(item.kind)) {
+  const cover = document.createElement('div');
+  cover.className = 'project-cover';
+  if (project.cover) {
     const img = document.createElement('img');
-    img.src = src;
-    img.alt = item.name;
-    lightboxContent.appendChild(img);
-
-  } else if (isVideo(item.kind)) {
-    const video = document.createElement('video');
-    video.src = src;
-    video.controls = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    video.onerror = () => {
-      lightboxContent.innerHTML =
-        '<div class="fallback">Браузер не смог воспроизвести это видео напрямую.<br>' +
-        '<a href="' + src + '" target="_blank" rel="noopener">Открыть / скачать файл</a></div>';
-    };
-    lightboxContent.appendChild(video);
-
-  } else if (item.kind === 'pdf') {
-    const iframe = document.createElement('iframe');
-    iframe.src = src;
-    iframe.className = 'pdf-frame';
-    lightboxContent.appendChild(iframe);
-    const link = document.createElement('a');
-    link.href = src;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.className = 'open-link';
-    link.textContent = 'Открыть в новой вкладке / скачать';
-    lightboxContent.appendChild(link);
-
-  } else if (item.kind === 'text') {
-    lightboxContent.innerHTML = '<div class="fallback">Загрузка текста…</div>';
-    try {
-      const res = await fetch(src, { cache: 'no-store' });
-      const text = await res.text();
-      const pre = document.createElement('pre');
-      pre.className = 'text-preview';
-      pre.textContent = text;
-      lightboxContent.innerHTML = '';
-      lightboxContent.appendChild(pre);
-    } catch (err) {
-      lightboxContent.innerHTML =
-        '<div class="fallback">Не удалось загрузить текст.<br>' +
-        '<a href="' + src + '" target="_blank" rel="noopener">Открыть / скачать файл</a></div>';
-    }
-
-  } else if (item.kind === 'rtf') {
-    lightboxContent.innerHTML =
-      '<div class="fallback">Браузер не умеет показывать RTF напрямую.<br>' +
-      '<a href="' + src + '" target="_blank" rel="noopener">Открыть / скачать файл</a></div>';
+    img.loading = 'lazy';
+    img.alt = project.name;
+    img.src = encodeMediaPath(project.cover);
+    cover.appendChild(img);
   }
+  card.appendChild(cover);
 
-  lightbox.classList.add('open');
-}
+  const info = document.createElement('div');
+  info.className = 'project-info';
 
-function renderFilters(mediaItems){
-  const projects = [...new Set(mediaItems.map(i => i.project).filter(Boolean))].sort();
-  if (projects.length === 0) { filtersEl.style.display = 'none'; return; }
+  const title = document.createElement('div');
+  title.className = 'project-title';
+  title.textContent = project.name;
+  info.appendChild(title);
 
-  filtersEl.innerHTML = '';
-  const allBtn = document.createElement('button');
-  allBtn.className = 'filter-btn active';
-  allBtn.textContent = 'Все работы';
-  allBtn.addEventListener('click', () => setFilter('all'));
-  filtersEl.appendChild(allBtn);
+  const link = document.createElement('a');
+  link.className = 'project-link';
+  link.href = `works.html?project=${encodeURIComponent(project.name)}`;
+  link.textContent = 'Смотреть →';
+  info.appendChild(link);
 
-  const commonBtn = document.createElement('button');
-  commonBtn.className = 'filter-btn';
-  commonBtn.textContent = 'Без проекта';
-  commonBtn.addEventListener('click', () => setFilter('__none__'));
-  filtersEl.appendChild(commonBtn);
-
-  projects.forEach(p => {
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn';
-    btn.textContent = p;
-    btn.addEventListener('click', () => setFilter(p));
-    filtersEl.appendChild(btn);
-  });
-}
-
-function setFilter(filter){
-  activeFilter = filter;
-  [...filtersEl.children].forEach(btn => {
-    const label = btn.textContent;
-    const matches = (filter === 'all' && label === 'Все работы') ||
-                     (filter === '__none__' && label === 'Без проекта') ||
-                     (label === filter);
-    btn.classList.toggle('active', matches);
-  });
-  renderGrid();
-}
-
-function renderGrid(){
-  gridEl.innerHTML = '';
-  const filtered = currentMediaItems.filter(item => {
-    if (activeFilter === 'all') return true;
-    if (activeFilter === '__none__') return !item.project;
-    return item.project === activeFilter;
-  });
-  filtered.forEach(item => {
-    const card = buildCard(item);
-    if (card) gridEl.appendChild(card);
-  });
+  card.appendChild(info);
+  return card;
 }
 
 async function init(){
   try {
-    const res = await fetch(MEDIA_JSON_PATH, { cache: 'no-store' });
+    const res = await fetch(PROJECTS_JSON_PATH, { cache: 'no-store' });
     if (!res.ok) {
-      throw new Error(`не удалось загрузить media.json (${res.status}). Возможно, GitHub Action ещё не запускался — запусти его вручную на вкладке Actions.`);
+      throw new Error(`не удалось загрузить projects.json (${res.status}). Возможно, GitHub Action ещё не запускался — запусти его вручную на вкладке Actions.`);
     }
-    const mediaItems = await res.json();
+    const projects = await res.json();
 
-    if (!mediaItems || mediaItems.length === 0) {
-      statusEl.textContent = 'В папке пока нет изображений или видео (или media.json ещё не сгенерирован).';
+    if (!projects || projects.length === 0) {
+      statusEl.textContent = 'Проектов пока нет — добавь папку с файлами на Яндекс.Диске.';
       return;
     }
 
-    currentMediaItems = mediaItems;
-    renderFilters(mediaItems);
-    renderGrid();
-
+    projects.forEach(p => gridEl.appendChild(buildProjectCard(p)));
     statusEl.textContent = '';
   } catch (err) {
     console.error(err);
-    statusEl.textContent = 'Не удалось загрузить список файлов: ' + err.message;
+    statusEl.textContent = 'Не удалось загрузить список проектов: ' + err.message;
     statusEl.classList.add('error');
   }
 }
