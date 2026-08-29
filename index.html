@@ -166,6 +166,24 @@
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
   }
 
+  .doc-tile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(160deg, #17180f, #0f100b);
+  }
+  .doc-tile svg{ width: 44px; height: 44px; opacity: 0.85; }
+  .doc-ext{
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
   /* Lightbox */
   #lightbox{
     position: fixed; inset: 0;
@@ -202,6 +220,34 @@
     text-decoration: underline;
   }
 
+  .pdf-frame{
+    width: min(900px, 90vw);
+    height: 86vh;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  #lightbox .open-link{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--accent);
+    font-size: 0.85rem;
+  }
+  .text-preview{
+    max-width: min(760px, 90vw);
+    max-height: 86vh;
+    overflow: auto;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    padding: 24px;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ink);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
   footer{
     padding: 4vh 6vw 6vh;
     color: var(--ink-dim);
@@ -220,7 +266,7 @@
 
 <header>
   <div class="eyebrow">Портфолио &mdash; работы</div>
-  <h1>Фото и видео с рабочего диска.</h1>
+  <h1>Фото, видео и документы с рабочего диска.</h1>
   <p class="sub">Галерея подключена напрямую к папке на Яндекс.Диске — новые файлы, добавленные в папку, появляются здесь при обновлении страницы.</p>
 </header>
 
@@ -263,13 +309,26 @@ function closeLightbox(){
   lightboxContent.innerHTML = '';
 }
 
-function isImage(mime){ return mime && mime.startsWith('image/'); }
-function isVideo(mime){ return mime && mime.startsWith('video/'); }
+function isImage(kind){ return kind === 'image'; }
+function isVideo(kind){ return kind === 'video'; }
+function isDoc(kind){ return kind === 'pdf' || kind === 'text' || kind === 'rtf'; }
+
+const TAG_LABELS = { image: 'фото', video: 'видео', pdf: 'pdf', text: 'txt', rtf: 'rtf' };
 
 function playIcon(){
   return '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
     '<circle cx="12" cy="12" r="11" fill="rgba(12,13,11,0.55)" stroke="#ece7db" stroke-width="1.2"/>' +
     '<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#ece7db"/></svg>';
+}
+
+function docIcon(){
+  return '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M6 2H14L19 7V22H6V2Z" stroke="#ece7db" stroke-width="1.3" fill="none"/>' +
+    '<path d="M14 2V7H19" stroke="#ece7db" stroke-width="1.3" fill="none"/>' +
+    '<line x1="8.5" y1="12" x2="16" y2="12" stroke="#ece7db" stroke-width="1" opacity="0.7"/>' +
+    '<line x1="8.5" y1="15" x2="16" y2="15" stroke="#ece7db" stroke-width="1" opacity="0.7"/>' +
+    '<line x1="8.5" y1="18" x2="13" y2="18" stroke="#ece7db" stroke-width="1" opacity="0.7"/>' +
+    '</svg>';
 }
 
 function buildCard(item){
@@ -278,7 +337,7 @@ function buildCard(item){
 
   const tag = document.createElement('div');
   tag.className = 'tag';
-  tag.textContent = isVideo(item.mime_type) ? 'видео' : 'фото';
+  tag.textContent = TAG_LABELS[item.kind] || item.kind;
   card.appendChild(tag);
 
   if (item.project) {
@@ -288,13 +347,13 @@ function buildCard(item){
     card.appendChild(projectTag);
   }
 
-  if (isImage(item.mime_type)) {
+  if (isImage(item.kind)) {
     const img = document.createElement('img');
     img.loading = 'lazy';
     img.alt = item.name;
     img.src = encodeMediaPath(item.path);
     card.appendChild(img);
-  } else if (isVideo(item.mime_type)) {
+  } else if (isVideo(item.kind)) {
     const video = document.createElement('video');
     video.src = encodeMediaPath(item.path);
     video.muted = true;
@@ -306,8 +365,13 @@ function buildCard(item){
     badge.className = 'playbadge';
     badge.innerHTML = playIcon();
     card.appendChild(badge);
+  } else if (isDoc(item.kind)) {
+    const tile = document.createElement('div');
+    tile.className = 'doc-tile';
+    tile.innerHTML = docIcon() + '<span class="doc-ext">.' + (item.kind === 'text' ? 'txt' : item.kind) + '</span>';
+    card.appendChild(tile);
   } else {
-    return null; // skip non-media files
+    return null; // неизвестный тип файла
   }
 
   const name = document.createElement('div');
@@ -325,15 +389,17 @@ function encodeMediaPath(p){
   return p.split('/').map(encodeURIComponent).join('/');
 }
 
-function openLightbox(item){
+async function openLightbox(item){
   lightboxContent.innerHTML = '';
   const src = encodeMediaPath(item.path);
-  if (isImage(item.mime_type)) {
+
+  if (isImage(item.kind)) {
     const img = document.createElement('img');
     img.src = src;
     img.alt = item.name;
     lightboxContent.appendChild(img);
-  } else if (isVideo(item.mime_type)) {
+
+  } else if (isVideo(item.kind)) {
     const video = document.createElement('video');
     video.src = src;
     video.controls = true;
@@ -345,7 +411,42 @@ function openLightbox(item){
         '<a href="' + src + '" target="_blank" rel="noopener">Открыть / скачать файл</a></div>';
     };
     lightboxContent.appendChild(video);
+
+  } else if (item.kind === 'pdf') {
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.className = 'pdf-frame';
+    lightboxContent.appendChild(iframe);
+    const link = document.createElement('a');
+    link.href = src;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.className = 'open-link';
+    link.textContent = 'Открыть в новой вкладке / скачать';
+    lightboxContent.appendChild(link);
+
+  } else if (item.kind === 'text') {
+    lightboxContent.innerHTML = '<div class="fallback">Загрузка текста…</div>';
+    try {
+      const res = await fetch(src, { cache: 'no-store' });
+      const text = await res.text();
+      const pre = document.createElement('pre');
+      pre.className = 'text-preview';
+      pre.textContent = text;
+      lightboxContent.innerHTML = '';
+      lightboxContent.appendChild(pre);
+    } catch (err) {
+      lightboxContent.innerHTML =
+        '<div class="fallback">Не удалось загрузить текст.<br>' +
+        '<a href="' + src + '" target="_blank" rel="noopener">Открыть / скачать файл</a></div>';
+    }
+
+  } else if (item.kind === 'rtf') {
+    lightboxContent.innerHTML =
+      '<div class="fallback">Браузер не умеет показывать RTF напрямую.<br>' +
+      '<a href="' + src + '" target="_blank" rel="noopener">Открыть / скачать файл</a></div>';
   }
+
   lightbox.classList.add('open');
 }
 
