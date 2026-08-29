@@ -2,6 +2,7 @@
   {
     "name": "photo_2026-06-16 23.30.35.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.30.35.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:11+00:00"
@@ -9,6 +10,7 @@
   {
     "name": "photo_2026-06-16 23.34.20.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.34.20.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:11+00:00"
@@ -16,6 +18,7 @@
   {
     "name": "photo_2026-06-16 23.34.24.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.34.24.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:11+00:00"
@@ -23,6 +26,7 @@
   {
     "name": "photo_2026-06-16 23.36.04.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.36.04.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:10+00:00"
@@ -30,6 +34,7 @@
   {
     "name": "photo_2026-06-16 23.36.08.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.36.08.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:10+00:00"
@@ -37,6 +42,7 @@
   {
     "name": "photo_2026-06-16 23.36.14.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.36.14.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:10+00:00"
@@ -44,6 +50,7 @@
   {
     "name": "photo_2026-06-16 23.37.53.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.37.53.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:09+00:00"
@@ -51,6 +58,7 @@
   {
     "name": "photo_2026-06-16 23.38.20.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.38.20.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:09+00:00"
@@ -58,6 +66,7 @@
   {
     "name": "photo_2026-06-16 23.38.25.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.38.25.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:09+00:00"
@@ -65,6 +74,7 @@
   {
     "name": "photo_2026-06-16 23.38.38.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.38.38.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:08+00:00"
@@ -72,6 +82,7 @@
   {
     "name": "photo_2026-06-16 23.38.47.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.38.47.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:08+00:00"
@@ -79,6 +90,7 @@
   {
     "name": "photo_2026-06-16 23.38.50.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.38.50.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:08+00:00"
@@ -86,6 +98,7 @@
   {
     "name": "photo_2026-06-16 23.39.16.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.16.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:08+00:00"
@@ -93,6 +106,7 @@
   {
     "name": "photo_2026-06-16 23.38.49.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.38.49.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:07+00:00"
@@ -100,6 +114,7 @@
   {
     "name": "photo_2026-06-16 23.39.05.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.05.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:07+00:00"
@@ -107,6 +122,7 @@
   {
     "name": "photo_2026-06-16 23.39.06.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.06.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:06+00:00"
@@ -114,6 +130,7 @@
   {
     "name": "photo_2026-06-16 23.39.09.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.09.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:06+00:00"
@@ -121,6 +138,7 @@
   {
     "name": "photo_2026-06-16 23.39.18.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.18.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:06+00:00"
@@ -128,6 +146,7 @@
   {
     "name": "photo_2026-06-16 23.39.29.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.29.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:06+00:00"
@@ -135,6 +154,7 @@
   {
     "name": "photo_2026-06-16 23.39.35.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.35.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:06+00:00"
@@ -142,13 +162,23 @@
   {
     "name": "photo_2026-06-16 23.39.22.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Инженерное/photo_2026-06-16 23.39.22.jpeg",
     "project": "Инженерное",
     "created": "2026-06-16T18:50:05+00:00"
   },
   {
+    "name": "Untitled 12.pdf 11-39-19-804.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/Молоток/Untitled 12.pdf 11-39-19-804.pdf",
+    "project": "Молоток",
+    "created": "2026-03-04T08:41:45+00:00"
+  },
+  {
     "name": "Ворота Левые.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Ворота Левые.png",
     "project": "Молоток",
     "created": "2026-03-04T08:41:18+00:00"
@@ -156,6 +186,7 @@
   {
     "name": "IMG_4300.jpg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток/IMG_4300.jpg",
     "project": "Молоток",
     "created": "2026-03-04T08:41:16+00:00"
@@ -163,6 +194,7 @@
   {
     "name": "Режим работы.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Режим работы.png",
     "project": "Молоток",
     "created": "2026-03-04T08:41:12+00:00"
@@ -170,6 +202,7 @@
   {
     "name": "Ворота правые.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Ворота правые.png",
     "project": "Молоток",
     "created": "2026-03-04T08:41:11+00:00"
@@ -177,6 +210,7 @@
   {
     "name": "Brands_SbS_Animation.mp4",
     "mime_type": "video/mp4",
+    "kind": "video",
     "path": "media/Реклама для Видеоэкранов/Brands_SbS_Animation.mp4",
     "project": "Реклама для Видеоэкранов",
     "created": "2026-03-04T08:39:46+00:00"
@@ -184,13 +218,31 @@
   {
     "name": "Item_SbS_Animation.mp4",
     "mime_type": "video/mp4",
+    "kind": "video",
     "path": "media/Реклама для Видеоэкранов/Item_SbS_Animation.mp4",
     "project": "Реклама для Видеоэкранов",
     "created": "2026-03-04T08:39:46+00:00"
   },
   {
+    "name": "Slide 4_3 - 7.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/Реклама для Видеоэкранов/Slide 4_3 - 7.pdf",
+    "project": "Реклама для Видеоэкранов",
+    "created": "2026-03-04T08:39:46+00:00"
+  },
+  {
+    "name": "Slide 4_3 - 12.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/Реклама для Видеоэкранов/Slide 4_3 - 12.pdf",
+    "project": "Реклама для Видеоэкранов",
+    "created": "2026-03-04T08:39:45+00:00"
+  },
+  {
     "name": "Untitled 1.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Новогодний Молоток Удачи (Завершено)/Untitled 1.png",
     "project": "Молоток Новогодний Молоток Удачи (Завершено)",
     "created": "2025-12-06T18:22:13+00:00"
@@ -198,6 +250,7 @@
   {
     "name": "Untitled 2.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Новогодний Молоток Удачи (Завершено)/Untitled 2.png",
     "project": "Молоток Новогодний Молоток Удачи (Завершено)",
     "created": "2025-12-06T18:22:08+00:00"
@@ -205,6 +258,7 @@
   {
     "name": "Календарь 2026 (Проект).jpg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Календарь 2026 (Проект).jpg",
     "project": null,
     "created": "2025-12-06T18:22:07+00:00"
@@ -212,6 +266,7 @@
   {
     "name": "Сайт Макет.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Редизайн сайта (В работе...)/Сайт Макет.png",
     "project": "Молоток Редизайн сайта (В работе...)",
     "created": "2025-12-06T18:22:06+00:00"
@@ -219,6 +274,7 @@
   {
     "name": "Блок-схема.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Редизайн сайта (В работе...)/Блок-схема.png",
     "project": "Молоток Редизайн сайта (В работе...)",
     "created": "2025-12-06T18:22:02+00:00"
@@ -226,6 +282,7 @@
   {
     "name": "WhatsApp Image 2025-09-23 at 16.53.22.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток/WhatsApp Image 2025-09-23 at 16.53.22.jpeg",
     "project": "Молоток",
     "created": "2025-12-06T18:21:59+00:00"
@@ -233,6 +290,7 @@
   {
     "name": "WhatsApp Image 2025-09-23 at 17.04.40.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток/WhatsApp Image 2025-09-23 at 17.04.40.jpeg",
     "project": "Молоток",
     "created": "2025-12-06T18:21:58+00:00"
@@ -240,6 +298,7 @@
   {
     "name": "Slide 4_3 - 9.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Реклама для Видеоэкранов/Slide 4_3 - 9.png",
     "project": "Реклама для Видеоэкранов",
     "created": "2025-12-06T18:21:57+00:00"
@@ -247,6 +306,7 @@
   {
     "name": "WhatsApp Image 2025-10-14 at 11.24.30.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток/WhatsApp Image 2025-10-14 at 11.24.30.jpeg",
     "project": "Молоток",
     "created": "2025-12-06T18:21:56+00:00"
@@ -254,6 +314,7 @@
   {
     "name": "WhatsApp Image 2025-10-15 at 15.55.37.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток/WhatsApp Image 2025-10-15 at 15.55.37.jpeg",
     "project": "Молоток",
     "created": "2025-12-06T18:21:55+00:00"
@@ -261,6 +322,7 @@
   {
     "name": "WhatsApp Image 2025-10-17 at 14.27.29.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Реклама для Видеоэкранов/WhatsApp Image 2025-10-17 at 14.27.29.jpeg",
     "project": "Реклама для Видеоэкранов",
     "created": "2025-12-06T18:21:55+00:00"
@@ -268,6 +330,7 @@
   {
     "name": "Slide 4_3 - 10.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Реклама для Видеоэкранов/Slide 4_3 - 10.png",
     "project": "Реклама для Видеоэкранов",
     "created": "2025-12-06T18:21:52+00:00"
@@ -275,6 +338,7 @@
   {
     "name": "Screenshot 2025-12-06 at 22.26.18.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Редизайн сайта (В работе...)/Screenshot 2025-12-06 at 22.26.18.png",
     "project": "Молоток Редизайн сайта (В работе...)",
     "created": "2025-12-06T18:21:51+00:00"
@@ -282,6 +346,7 @@
   {
     "name": "Макет Пакетов Молоток (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Макет Пакетов Молоток (Завершено).png",
     "project": null,
     "created": "2025-12-06T18:21:48+00:00"
@@ -289,6 +354,7 @@
   {
     "name": "Frame 21.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Frame 21.png",
     "project": "Молоток",
     "created": "2025-12-06T18:21:46+00:00"
@@ -296,6 +362,7 @@
   {
     "name": "Frame 28.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Frame 28.png",
     "project": "Молоток",
     "created": "2025-12-06T18:21:46+00:00"
@@ -303,6 +370,7 @@
   {
     "name": "Frame 26.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Frame 26.png",
     "project": "Молоток",
     "created": "2025-12-06T18:21:45+00:00"
@@ -310,6 +378,7 @@
   {
     "name": "Frame 24.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Frame 24.png",
     "project": "Молоток",
     "created": "2025-12-06T18:21:42+00:00"
@@ -317,6 +386,7 @@
   {
     "name": "Frame 27.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Frame 27.png",
     "project": "Молоток",
     "created": "2025-12-06T18:21:41+00:00"
@@ -324,6 +394,7 @@
   {
     "name": "Frame 25.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток/Frame 25.png",
     "project": "Молоток",
     "created": "2025-12-06T18:21:39+00:00"
@@ -331,6 +402,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.24.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.24.jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:24+00:00"
@@ -338,6 +410,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.21.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.21.jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:23+00:00"
@@ -345,6 +418,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.24 (2).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.24 (2).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:23+00:00"
@@ -352,6 +426,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.23 (2).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.23 (2).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:22+00:00"
@@ -359,6 +434,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.23.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.23.jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:22+00:00"
@@ -366,6 +442,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.24 (1).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.24 (1).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:22+00:00"
@@ -373,6 +450,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.23 (1).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.23 (1).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:21+00:00"
@@ -380,6 +458,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.22 (3).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.22 (3).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:20+00:00"
@@ -387,6 +466,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.20.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.20.jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:19+00:00"
@@ -394,6 +474,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.22 (1).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.22 (1).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:19+00:00"
@@ -401,6 +482,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.22 (2).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.22 (2).jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:19+00:00"
@@ -408,6 +490,7 @@
   {
     "name": "WhatsApp Image 2025-11-14 at 18.27.22.jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/WhatsApp Image 2025-11-14 at 18.27.22.jpeg",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:14:19+00:00"
@@ -415,6 +498,7 @@
   {
     "name": "Frame 60.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 60.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:26+00:00"
@@ -422,6 +506,7 @@
   {
     "name": "Frame 62.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 62.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:26+00:00"
@@ -429,6 +514,7 @@
   {
     "name": "Frame 56.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 56.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:25+00:00"
@@ -436,6 +522,7 @@
   {
     "name": "Frame 61.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 61.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:25+00:00"
@@ -443,6 +530,7 @@
   {
     "name": "Frame 52.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 52.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:24+00:00"
@@ -450,6 +538,7 @@
   {
     "name": "Frame 54.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 54.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:24+00:00"
@@ -457,6 +546,7 @@
   {
     "name": "Frame 55.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 55.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:24+00:00"
@@ -464,6 +554,7 @@
   {
     "name": "Frame 58.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 58.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:24+00:00"
@@ -471,6 +562,7 @@
   {
     "name": "Frame 59.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 59.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:24+00:00"
@@ -478,6 +570,7 @@
   {
     "name": "Frame 53.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Frame 53.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:12:23+00:00"
@@ -485,6 +578,7 @@
   {
     "name": "Screenshot 2025-12-06 at 22.55.58.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Молоток Навигация (проект)/Screenshot 2025-12-06 at 22.55.58.png",
     "project": "Молоток Навигация (проект)",
     "created": "2025-12-06T18:11:50+00:00"
@@ -492,6 +586,7 @@
   {
     "name": "1.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Униформа для студсовета (завершено)/1.png",
     "project": "Униформа для студсовета (завершено)",
     "created": "2025-07-22T10:47:36+00:00"
@@ -499,6 +594,7 @@
   {
     "name": "3.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Униформа для студсовета (завершено)/3.png",
     "project": "Униформа для студсовета (завершено)",
     "created": "2025-07-22T10:47:36+00:00"
@@ -506,6 +602,7 @@
   {
     "name": "2.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Униформа для студсовета (завершено)/2.png",
     "project": "Униформа для студсовета (завершено)",
     "created": "2025-07-22T10:47:35+00:00"
@@ -513,6 +610,7 @@
   {
     "name": "5.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Униформа для студсовета (завершено)/5.png",
     "project": "Униформа для студсовета (завершено)",
     "created": "2025-07-22T10:47:35+00:00"
@@ -520,6 +618,7 @@
   {
     "name": "4.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Униформа для студсовета (завершено)/4.png",
     "project": "Униформа для студсовета (завершено)",
     "created": "2025-07-22T10:47:34+00:00"
@@ -527,6 +626,7 @@
   {
     "name": "1.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Студия груминга (Проект)/1.png",
     "project": "Студия груминга (Проект)",
     "created": "2025-07-22T10:47:33+00:00"
@@ -534,27 +634,95 @@
   {
     "name": "4 — копия.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Униформа для студсовета (завершено)/4 — копия.png",
     "project": "Униформа для студсовета (завершено)",
     "created": "2025-07-22T10:47:33+00:00"
   },
   {
+    "name": "brandbook_СОВА_11 1.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/СОВА/brandbook_СОВА_11 1.pdf",
+    "project": "СОВА",
+    "created": "2025-07-22T10:47:32+00:00"
+  },
+  {
+    "name": "Project description.rtf",
+    "mime_type": "text/rtf",
+    "kind": "rtf",
+    "path": "media/Студия груминга (Проект)/Project description.rtf",
+    "project": "Студия груминга (Проект)",
+    "created": "2025-07-22T10:47:32+00:00"
+  },
+  {
+    "name": "Project description.rtf",
+    "mime_type": "text/rtf",
+    "kind": "rtf",
+    "path": "media/Униформа для студсовета (завершено)/Project description.rtf",
+    "project": "Униформа для студсовета (завершено)",
+    "created": "2025-07-22T10:47:32+00:00"
+  },
+  {
     "name": "1.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/День Студента 2022 (Завершено)/1.png",
     "project": "День Студента 2022 (Завершено)",
     "created": "2025-07-22T10:47:31+00:00"
   },
   {
+    "name": "Frame 4.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/СОВА/Frame 4.pdf",
+    "project": "СОВА",
+    "created": "2025-07-22T10:47:31+00:00"
+  },
+  {
+    "name": "Frame 5.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/СОВА/Frame 5.pdf",
+    "project": "СОВА",
+    "created": "2025-07-22T10:47:31+00:00"
+  },
+  {
+    "name": "Frame 6.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/СОВА/Frame 6.pdf",
+    "project": "СОВА",
+    "created": "2025-07-22T10:47:31+00:00"
+  },
+  {
     "name": "3.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/День Студента 2022 (Завершено)/3.png",
     "project": "День Студента 2022 (Завершено)",
     "created": "2025-07-22T10:47:30+00:00"
   },
   {
+    "name": "Frame 2.pdf",
+    "mime_type": "application/pdf",
+    "kind": "pdf",
+    "path": "media/СОВА/Frame 2.pdf",
+    "project": "СОВА",
+    "created": "2025-07-22T10:47:30+00:00"
+  },
+  {
+    "name": "Project description.rtf",
+    "mime_type": "text/rtf",
+    "kind": "rtf",
+    "path": "media/Дебют Первокурсника 2022 (Завершено)/Project description.rtf",
+    "project": "Дебют Первокурсника 2022 (Завершено)",
+    "created": "2025-07-22T10:47:29+00:00"
+  },
+  {
     "name": "2.mp4",
     "mime_type": "video/mp4",
+    "kind": "video",
     "path": "media/День Студента 2022 (Завершено)/2.mp4",
     "project": "День Студента 2022 (Завершено)",
     "created": "2025-07-22T10:47:29+00:00"
@@ -562,13 +730,23 @@
   {
     "name": "4.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/День Студента 2022 (Завершено)/4.png",
+    "project": "День Студента 2022 (Завершено)",
+    "created": "2025-07-22T10:47:29+00:00"
+  },
+  {
+    "name": "Project description.rtf",
+    "mime_type": "text/rtf",
+    "kind": "rtf",
+    "path": "media/День Студента 2022 (Завершено)/Project description.rtf",
     "project": "День Студента 2022 (Завершено)",
     "created": "2025-07-22T10:47:29+00:00"
   },
   {
     "name": "5.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Дебют Первокурсника 2021 (Завершено)/5.png",
     "project": "Дебют Первокурсника 2021 (Завершено)",
     "created": "2025-07-22T10:47:28+00:00"
@@ -576,6 +754,7 @@
   {
     "name": "1.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Дебют Первокурсника 2022 (Завершено)/1.png",
     "project": "Дебют Первокурсника 2022 (Завершено)",
     "created": "2025-07-22T10:47:28+00:00"
@@ -583,6 +762,7 @@
   {
     "name": "2.mp4",
     "mime_type": "video/mp4",
+    "kind": "video",
     "path": "media/Дебют Первокурсника 2022 (Завершено)/2.mp4",
     "project": "Дебют Первокурсника 2022 (Завершено)",
     "created": "2025-07-22T10:47:28+00:00"
@@ -590,6 +770,7 @@
   {
     "name": "1.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Дебют Первокурсника 2021 (Завершено)/1.png",
     "project": "Дебют Первокурсника 2021 (Завершено)",
     "created": "2025-07-22T10:47:27+00:00"
@@ -597,6 +778,7 @@
   {
     "name": "2.mov",
     "mime_type": "video/quicktime",
+    "kind": "video",
     "path": "media/Дебют Первокурсника 2021 (Завершено)/2.mov",
     "project": "Дебют Первокурсника 2021 (Завершено)",
     "created": "2025-07-22T10:47:27+00:00"
@@ -604,6 +786,7 @@
   {
     "name": "3.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Дебют Первокурсника 2021 (Завершено)/3.png",
     "project": "Дебют Первокурсника 2021 (Завершено)",
     "created": "2025-07-22T10:47:27+00:00"
@@ -611,13 +794,23 @@
   {
     "name": "4.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Дебют Первокурсника 2021 (Завершено)/4.png",
+    "project": "Дебют Первокурсника 2021 (Завершено)",
+    "created": "2025-07-22T10:47:27+00:00"
+  },
+  {
+    "name": "Project description.rtf",
+    "mime_type": "text/rtf",
+    "kind": "rtf",
+    "path": "media/Дебют Первокурсника 2021 (Завершено)/Project description.rtf",
     "project": "Дебют Первокурсника 2021 (Завершено)",
     "created": "2025-07-22T10:47:27+00:00"
   },
   {
     "name": "Frame 2.png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Frame 2.png",
     "project": null,
     "created": "2025-07-22T10:47:26+00:00"
@@ -625,6 +818,7 @@
   {
     "name": "Буклет Внут. сторона (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Буклет Внут. сторона (Завершено).png",
     "project": null,
     "created": "2025-07-22T10:47:26+00:00"
@@ -632,6 +826,7 @@
   {
     "name": "Буклет Лицевая сторона (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Буклет Лицевая сторона (Завершено).png",
     "project": null,
     "created": "2025-07-22T10:47:25+00:00"
@@ -639,6 +834,7 @@
   {
     "name": "Визитка (Завершено).jpeg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Визитка (Завершено).jpeg",
     "project": null,
     "created": "2025-07-22T10:47:25+00:00"
@@ -646,6 +842,7 @@
   {
     "name": "Дипломы (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Дипломы (Завершено).png",
     "project": null,
     "created": "2025-07-22T10:47:25+00:00"
@@ -653,6 +850,7 @@
   {
     "name": "Листовка Глаз Радует (Завершено).jpg",
     "mime_type": "image/jpeg",
+    "kind": "image",
     "path": "media/Листовка Глаз Радует (Завершено).jpg",
     "project": null,
     "created": "2025-07-22T10:47:25+00:00"
@@ -660,6 +858,7 @@
   {
     "name": "Баннер (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Баннер (Завершено).png",
     "project": null,
     "created": "2025-07-22T10:47:24+00:00"
@@ -667,6 +866,7 @@
   {
     "name": "Кого (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Кого (Завершено).png",
     "project": null,
     "created": "2025-07-22T10:47:24+00:00"
@@ -674,6 +874,7 @@
   {
     "name": "Сертификат (Завершено).png",
     "mime_type": "image/png",
+    "kind": "image",
     "path": "media/Сертификат (Завершено).png",
     "project": null,
     "created": "2025-07-22T10:47:24+00:00"
